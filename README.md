@@ -39,7 +39,7 @@ select_file_only <- as.character(basename(select_file_name))
 myfile <- read_csv(file = select_file_name)
 ```
 
-This section creates the other_install data frame and the baseR data frame.  This is designed to create the data frams for comparison of the packages.  Since they are transformed from system parameters and due to the desire to customize the names of the files, the column names need to be renamed to a common heading "Package".  This is the same name when using the installed.packages command.  
+This section creates the other_install data frame and the baseR data frame.  This is designed to create the data frams for comparison of the packages.  Since they are transformed from system parameters and due to the desire to customize the names of the files, the column names need to be renamed to a common heading "Package".  This is the same name when using the installed.packages command.  This also section creates a subdirectory to save the files to.  This subdirectory is named for the computer the user is currently using.
 ```{r create comparison data frames}
 other_install <- as.data.frame(myfile$Package)
 colnames(other_install) <- "Package"
@@ -51,10 +51,8 @@ dir.create(dir_name)
 setwd(dir_name)
 ```
 
-This section creates a subdirectory to save the files to.  This subdirectory is named for the computer the user is currently using.
-```{r subdirectory}
 
-```
+
 
 This section creates two files that are saved to the subdirectory.  The first gives a list of packages that are not on the current computer as of the date in the front of the file.  The second gives a list of packages not on the comparison computer but that are present on the current computer.  This allows one to see if there are packages on the current computer that are not on the computer that generated the original CSV of packages to compare against.
 ```{r analytic files}
