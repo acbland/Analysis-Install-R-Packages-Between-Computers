@@ -6,6 +6,8 @@ I also used the [anti_join](http://zevross.com/blog/2014/08/05/using-the-r-funct
 
 I also added interactivity with being able to choose the packages file.  
 
+The hashtags are where I left the colde from the r-blogger's website example code.  
+
 
 I took off the last 6 characters of the computer name as I use a Mac and this is .local and did not want that in the file name.  
 ```{r set_up}
