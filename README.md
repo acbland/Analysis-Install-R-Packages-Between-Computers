@@ -2,8 +2,12 @@
  
 Notebook.The purpose of this code is to identify and install any packages between two different computers.  The code is based off of [R-Blogger's Quick Way of Installing your old R libraries on a new device](https://www.r-bloggers.com/quick-way-of-installing-all-your-old-r-libraries-on-a-new-device/) written on July 26, 2017.
 
-I also used the [anti_join](http://zevross.com/blog/2014/08/05/using-the-r-function-anti_join-to-find-unmatched-records/) 
+I also used the [anti_join](http://zevross.com/blog/2014/08/05/using-the-r-function-anti_join-to-find-unmatched-records/) as the method to compare.  Futher extended the compare back across the new computer to show what packages were on the new computer that were not yet on the old computer.
 
+I also added interactivity with being able to choose the packages file.  
+
+
+I took off the last 6 characters of the computer name as I use a Mac and this is .local and did not want that in the file name.  
 ```{r set_up}
 library(tidyverse)
 
